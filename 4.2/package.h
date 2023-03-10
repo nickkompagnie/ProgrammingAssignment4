@@ -1,5 +1,5 @@
 //==============================================================
-// Filename    : main.cpp
+// Filename    : package.h
 // Authors     : Nick Kompagnie(S2617676), Quinten Boeve(s2520222)
 // Group       : 17
 // License     : N.A. or opensource license like LGPL
@@ -7,6 +7,7 @@
 //==============================================================
 #include <iostream>
 #include <string>
+#include "Customer.h"
 
 #ifndef package
 #define package
@@ -22,10 +23,12 @@ class Package {
         std::string adress_sender;
         std::string name_receiver;
         std::string adress_receiver;
+        Customer* _sender;
+        Customer* _receiver;
         float weight;
 
         
-        void SetDetails(std::string Name_Sender, std::string Adress_Sender,std::string Name_Receiver,std::string Adress_Receiver, float Weight);
+        void SetDetails(Customer* sender, Customer* receiver, float Weight);
 
         virtual float calculateCost() const = 0; 
 

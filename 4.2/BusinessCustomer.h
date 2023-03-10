@@ -19,9 +19,9 @@ std::string company_name;
 std::string contact_person;
 
 void SetCompany(std::string Company_Name, std::string Contact_Person);
+   
+virtual std::string getNames() override;
 
-
-    
 
 };
 

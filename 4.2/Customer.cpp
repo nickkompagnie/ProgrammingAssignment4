@@ -1,5 +1,5 @@
 //==============================================================
-// Filename    : main.cpp
+// Filename    : Customer.cpp
 // Authors     : Nick Kompagnie(S2617676), Quinten Boeve(s2520222)
 // Group       : 17
 // License     : N.A. or opensource license like LGPL
@@ -12,9 +12,13 @@
 
 
 
-void Customer::SetDetails(std::string Adress) {
+void Customer::SetAddress(std::string Address) {
     
-    adress = Adress;
+    address = Address;
+
+}
+void Customer::getAddress() {
+    std::cout << "Customer address is: " << address << std::endl;
 
 }
 

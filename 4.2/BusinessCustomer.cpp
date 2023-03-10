@@ -9,9 +9,15 @@
 #include <string>
 #include "BusinessCustomer.h"
 
+
 void BusinessCustomer::SetCompany(std::string Company_Name, std::string Contact_Person) {
 
     company_name = Company_Name;
     contact_person = Contact_Person;
    
 };
+
+std::string BusinessCustomer::getNames() {
+    std::string stringToReturn = contact_person + company_name;
+    return stringToReturn;
+}

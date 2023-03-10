@@ -1,5 +1,5 @@
 //==============================================================
-// Filename    : main.cpp
+// Filename    : Customer.h
 // Authors     : Nick Kompagnie(S2617676), Quinten Boeve(s2520222)
 // Group       : 17
 // License     : N.A. or opensource license like LGPL
@@ -19,8 +19,10 @@ class Customer {
 
     public:
 
-        std::string adress;
-        void SetDetails(std::string Adress);
+        std::string address;
+        void SetAddress(std::string Address);
+        void getAddress();
+        virtual std::string getNames() = 0;
 
 
     private:
