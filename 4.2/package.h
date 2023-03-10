@@ -15,10 +15,7 @@
 
 
 class Package {
-
-
     public:
-
         std::string name_sender;
         std::string adress_sender;
         std::string name_receiver;
@@ -27,11 +24,9 @@ class Package {
         Customer* _receiver;
         float weight;
 
-        
         void SetDetails(Customer* sender, Customer* receiver, float Weight);
 
         virtual float calculateCost() const = 0; 
-
 
         std::string getNameSender();
         std::string getAdressSender();

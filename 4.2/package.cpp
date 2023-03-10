@@ -10,7 +10,7 @@
 #include <string>
 #include "package.h"
 
-    
+//Sets the details of the package. Takes Customers as sender and receiver and a float as weight.
 void Package::SetDetails(Customer* sender, Customer* receiver, float Weight) {
     
     _sender = sender;

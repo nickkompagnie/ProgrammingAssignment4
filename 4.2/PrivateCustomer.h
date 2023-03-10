@@ -1,5 +1,5 @@
 //==============================================================
-// Filename    : PrivateCustomer.hs
+// Filename    : PrivateCustomer.h
 // Authors     : Nick Kompagnie(S2617676), Quinten Boeve(s2520222)
 // Group       : 17
 // License     : N.A. or opensource license like LGPL
@@ -11,13 +11,10 @@
 
 class PrivateCustomer : public Customer {
 
-
 public:
-
     std::string name;
 
     void SetName(std::string Name);
     virtual std::string getNames() override;
-
 
 };

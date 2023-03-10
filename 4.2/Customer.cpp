@@ -11,12 +11,14 @@
 #include "Customer.h"
 
 
-
+//Set address of customer
 void Customer::SetAddress(std::string Address) {
     
     address = Address;
 
 }
+
+//Get address of customer
 std::string Customer::getAddress() {
     return address; 
 }

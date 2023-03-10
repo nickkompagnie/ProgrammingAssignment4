@@ -1,5 +1,5 @@
 //==============================================================
-// Filename    : main.cpp
+// Filename    : BusinessCustomer.h
 // Authors     : Nick Kompagnie(S2617676), Quinten Boeve(s2520222)
 // Group       : 17
 // License     : N.A. or opensource license like LGPL
@@ -11,7 +11,6 @@
 #include "Customer.h"
 
 class BusinessCustomer: public Customer {
-
 
 public:
 

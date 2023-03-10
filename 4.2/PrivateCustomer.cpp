@@ -8,12 +8,14 @@
 #include <iostream>
 #include "PrivateCustomer.h"
 
+//Sets name of private customer
 void PrivateCustomer::SetName(std::string Name) {
 
     name = Name;
 
 };
 
+//Gets name of private customer
 std::string PrivateCustomer::getNames() {
     return name;
 }

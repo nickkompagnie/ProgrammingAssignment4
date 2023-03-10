@@ -20,16 +20,36 @@
 //This function prints all the shipping costs, by using the calculateCost function of every instance. 
 //The function expects a vector with pointers to the packages
 //The output is visible in the terminal
-
 void printCosts(std::vector<Package*> Packagelist) {
 
     for(int i=0; i < Packagelist.size(); i++) {
         float result = Packagelist[i]->calculateCost();
-        std::cout << "Package from: " << Packagelist[i]->getNameSender() << " to: " << Packagelist[i]->getAddressReceiver() << " Costs: " << result << "euro" << std::endl;
+        std::cout << "Package from: " << Packagelist[i]->getNameSender() << " to: " << Packagelist[i]->getAddressReceiver() << ". Costs: " << result << "euro" << std::endl;
     }
+    std::cout << "\n";
 }
 
+//Print info of customers
+void printCustomerInfo(std::vector<Customer*> customerList) {
+    for (int i = 0; i < customerList.size(); i++) {
+        std::string address = customerList[i]->getAddress();
+        std::string names = customerList[i]->getNames();
+        std::cout << "Customer address " << address << ". Name: " << names << std::endl;
+    }
+    std::cout << "\n";
+}
 
+//Print all business contact persons
+void printChristmasCardContactPersons(std::vector<Customer*> customerList) {
+    for (int i = 0; i < customerList.size(); i++) {
+        BusinessCustomer* bc = dynamic_cast<BusinessCustomer*>(customerList[i]);
+        if (bc != nullptr) {
+            std::string names = customerList[i]->getNames();
+            std::cout << "Contact person name: " << names << std::endl;
+        }
+    }
+    std::cout << "\n";
+}
 
 int main(void) {
 
@@ -42,20 +62,17 @@ int main(void) {
     OvernightPackage    package3;
     TwoDayPackage       package4;
 
-    
-
-
     //Initialize the vector in which customers will be stored
     std::vector<Customer*> Customerlist;
 
     //Declaration of customers
-    PrivateCustomer    customer1;
+    PrivateCustomer        customer1;
     BusinessCustomer       customer2;
-    PrivateCustomer    customer3;
+    PrivateCustomer        customer3;
     BusinessCustomer       customer4;
-    PrivateCustomer       customer5;
+    PrivateCustomer        customer5;
     BusinessCustomer       customer6;
-    PrivateCustomer       customer7;
+    PrivateCustomer        customer7;
 
     //Set address
     customer1.SetAddress("Isaplantsoen 552b, 3 hoog achter, 1842 ZM, Coevorden, Friesland, Netherlands");
@@ -86,18 +103,11 @@ int main(void) {
     Customerlist.push_back(&customer6);
     Customerlist.push_back(&customer7);
 
-    customer1.getNames();
-    customer2.getNames();
-    customer3.getNames();
-    customer4.getNames();
-    customer5.getNames();
-    customer6.getNames();
-    customer7.getNames();
 
-    //Use set function to set the variables in the object. Input defined as (Name_Sender, Adress_Sender,Name_Receiver, Adress_Receiver, Weight)
-    // All strings except for the Weight. The function expects a float for that.
+    //Use set function to set the variables in the object. Input defined as (Sender, Receiver, Weight).
+    //Sender and receiver are customers that have an adress and names. They could be people or companies
     package1.SetDetails(&customer1, &customer2, 5.5f);
-    package2.SetDetails(&customer3, &customer4, 6.25f);
+    package2.SetDetails(&customer3, &customer2, 6.25f);
     package3.SetDetails(&customer1, &customer3, 20.3f);
     package4.SetDetails(&customer6, &customer7 ,11.2f);
 
@@ -109,6 +119,8 @@ int main(void) {
 
     //Call the printCosts function with the prevously made list as an input.
     printCosts(Packagelist);
+    printCustomerInfo(Customerlist);
+    printChristmasCardContactPersons(Customerlist);
 
 return 0;
 }

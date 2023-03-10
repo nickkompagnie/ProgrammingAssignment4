@@ -1,5 +1,5 @@
 //==============================================================
-// Filename    : main.cpp
+// Filename    : TwoDayPackage.cpp
 // Authors     : Nick Kompagnie(S2617676), Quinten Boeve(s2520222)
 // Group       : 17
 // License     : N.A. or opensource license like LGPL
@@ -10,7 +10,7 @@
 #include <string>
 #include "TwoDayPackage.h"
 
-
+//Calculates the cost of the two day package
    float TwoDayPackage::calculateCost() const  {
         const float pricePerKilo = 2.5;
         const int flatFee = 5;
