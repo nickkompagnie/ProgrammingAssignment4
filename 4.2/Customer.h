@@ -21,7 +21,7 @@ class Customer {
 
         std::string address;
         void SetAddress(std::string Address);
-        void getAddress();
+        std::string getAddress();
         virtual std::string getNames() = 0;
 
 

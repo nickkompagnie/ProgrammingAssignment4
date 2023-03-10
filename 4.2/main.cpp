@@ -99,7 +99,7 @@ int main(void) {
     package1.SetDetails(&customer1, &customer2, 5.5f);
     package2.SetDetails(&customer3, &customer4, 6.25f);
     package3.SetDetails(&customer1, &customer3, 20.3f);
-    package4.SetDetails(&customer7, &customer6 ,11.2f);
+    package4.SetDetails(&customer6, &customer7 ,11.2f);
 
     //Pushing all the packages in a vector.
     Packagelist.push_back(&package1);

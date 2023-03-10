@@ -16,9 +16,9 @@ void Package::SetDetails(Customer* sender, Customer* receiver, float Weight) {
     _sender = sender;
     _receiver = receiver;
     name_sender = sender->getNames();
-    //adress_sender = sender->getAddress();
+    adress_sender = sender->getAddress();
     name_receiver = receiver->getNames();
-    //adress_receiver = sender->getAddress();
+    adress_receiver = sender->getAddress();
     weight = Weight;
 }
 

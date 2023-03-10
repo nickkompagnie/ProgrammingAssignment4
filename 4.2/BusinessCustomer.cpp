@@ -18,6 +18,6 @@ void BusinessCustomer::SetCompany(std::string Company_Name, std::string Contact_
 };
 
 std::string BusinessCustomer::getNames() {
-    std::string stringToReturn = contact_person + company_name;
+    std::string stringToReturn = contact_person + ", " + company_name;
     return stringToReturn;
 }

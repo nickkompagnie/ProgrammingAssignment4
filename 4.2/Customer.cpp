@@ -17,8 +17,7 @@ void Customer::SetAddress(std::string Address) {
     address = Address;
 
 }
-void Customer::getAddress() {
-    std::cout << "Customer address is: " << address << std::endl;
-
+std::string Customer::getAddress() {
+    return address; 
 }
 
