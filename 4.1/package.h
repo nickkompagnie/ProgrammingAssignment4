@@ -23,18 +23,18 @@ class Package {
         std::string name_receiver;
         std::string adress_receiver;
         float weight;
-    
+
+        
         void SetDetails(std::string Name_Sender, std::string Adress_Sender,std::string Name_Receiver,std::string Adress_Receiver, float Weight);
 
         virtual float calculateCost() const = 0; 
-        
 
+
+        std::string getNameSender();
+        std::string getAdressSender();
+        std::string getNameReceiver();
+        std::string getAddressReceiver();
     private:
-
-
-
-
-
 };
 
 #endif

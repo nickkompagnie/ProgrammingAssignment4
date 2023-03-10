@@ -5,20 +5,17 @@
 // License     : N.A. or opensource license like LGPL
 // Description : Assignment 4.1
 //==============================================================
-
 #include <iostream>
 #include <string>
-#include "TwoDayPackage.h"
+#include "package.h"
+
+class TwoDayPackage: public Package {
+
+public:
+
+    virtual float calculateCost() const override;
 
 
-
-
-   float TwoDayPackage::calculateCost() const  {
-        const float pricePerKilo = 2.5;
-        const int flatFee = 5;
-        float costs = weight*pricePerKilo + flatFee;
-            return costs;
-        }
-
+};
 
 
